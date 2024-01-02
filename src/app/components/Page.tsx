@@ -61,7 +61,11 @@ const Page = () => {
         </div>
       </div>
       <button
-        onClick={!gameStarted ? startGame : stopGame}
+        onClick={() => {
+          if (!gameStarted) {
+            startGame();
+          }
+        }}
         className={clsx(twMerge("mt-auto"))}
         disabled={gameStarted}
       >
