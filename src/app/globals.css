@@ -47,3 +47,8 @@ button {
   font-family: "Play", sans-serif;
   width: fit-content;
 }
+
+button:disabled {
+  background-color: rgba(66, 66, 66, 0.862);
+  color: rgba(245, 245, 245, 0.6);
+}

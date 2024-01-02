@@ -6,7 +6,7 @@ import { twMerge } from "tailwind-merge";
 export const Ball = () => {
   const hiddenBall = useAtomValue(hiddenBallAtom);
   return (
-    <div className="relative bg-blue-500 w-10 h-14">
+    <div className="relative w-10 h-14">
       <div
         className={clsx(
           twMerge(
