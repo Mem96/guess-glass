@@ -7,9 +7,12 @@ import {
   hasWonAtom,
   hiddenBallAtom,
   isMovingAtom,
+  playedGamesAtom,
+  wonGamesAtom,
 } from "../atoms/GameAtoms";
 import { moveAround } from "../functions";
 import Glass from "./Glass";
+import Statistics from "./Statistics";
 
 const Page = () => {
   const [isFirstGame, setIsFirstGame] = useState(true);
@@ -31,7 +34,7 @@ const Page = () => {
   };
 
   return (
-    <div className="flex flex-col w-full h-[80vh] align-center justify-space-between">
+    <div className="flex flex-col w-full h-[80vh] align-center justify-space-between relative">
       <h1 className="mb-10">Guess the glass</h1>
       <h2
         className={clsx(
@@ -50,9 +53,14 @@ const Page = () => {
           ? "Choose one!"
           : "Nope... Try again"}
       </h2>
+      <Statistics />
       <div
-        className="w-[300px] h-[200px] flex items-center justify-center m-auto bg-contain rounded-md"
-        style={{ backgroundImage: "url(./assets/wood.jpg)" }}
+        className="w-[300px] h-[200px] flex items-center justify-center m-auto rounded-md"
+        style={{
+          backgroundImage: "url(./assets/wood.jpg)",
+          backgroundPosition: "50%",
+          backgroundSize: "101% auto",
+        }}
       >
         <div className="flex gap-3 my-4 w-10 h-12 ">
           <Glass pos={positions[0]} className="" />

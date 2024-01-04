@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 :root {
-  --background-start-rgb: 108, 90, 120;
+  --background-start-rgb: 200, 137, 200;
   --background-end-rgb: 130, 100, 190;
 }
 
@@ -34,6 +34,11 @@ h2 {
   font-weight: 400;
   font-size: 30px;
   text-align: center;
+}
+
+.white-text {
+  font-family: "Play", sans-serif;
+  font-size: 12px;
 }
 
 button {

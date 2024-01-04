@@ -6,6 +6,8 @@ import {
   gameStartedAtom,
   hasWonAtom,
   hiddenBallAtom,
+  playedGamesAtom,
+  wonGamesAtom,
 } from "../atoms/GameAtoms";
 
 const Glass = ({
@@ -19,7 +21,10 @@ const Glass = ({
 }) => {
   const [gameStarted, setGameStarted] = useAtom(gameStartedAtom);
   const [hiddenBall, setHiddenBall] = useAtom(hiddenBallAtom);
+
+  const setPlayedGames = useSetAtom(playedGamesAtom);
   const setWon = useSetAtom(hasWonAtom);
+  const setWonCount = useSetAtom(wonGamesAtom);
 
   return (
     <div
@@ -31,8 +36,10 @@ const Glass = ({
       onClick={() => {
         if (gameStarted && hiddenBall) {
           setHiddenBall(false);
+          setPlayedGames((p) => p + 1);
           if (hasBall) {
             setWon(true);
+            setWonCount((p) => p + 1);
           } else {
             setWon(false);
           }
