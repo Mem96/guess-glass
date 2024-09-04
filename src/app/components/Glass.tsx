@@ -6,9 +6,8 @@ import {
   gameStartedAtom,
   hasWonAtom,
   hiddenBallAtom,
-  playedGamesAtom,
-  wonGamesAtom,
 } from "../atoms/GameAtoms";
+import { playedGamesAtom, wonGamesAtom } from "../atoms/StatisticsAtoms";
 
 const Glass = ({
   pos,

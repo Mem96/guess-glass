@@ -57,3 +57,13 @@ button:disabled {
   background-color: rgba(66, 66, 66, 0.862);
   color: rgba(245, 245, 245, 0.6);
 }
+
+.icon-button {
+  width: 36px;
+  height: 36px;
+  min-width: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

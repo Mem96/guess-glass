@@ -7,12 +7,11 @@ import {
   hasWonAtom,
   hiddenBallAtom,
   isMovingAtom,
-  playedGamesAtom,
-  wonGamesAtom,
 } from "../atoms/GameAtoms";
 import { moveAround } from "../functions";
 import Glass from "./Glass";
 import Statistics from "./Statistics";
+import Options from "./Options";
 
 const Page = () => {
   const [isFirstGame, setIsFirstGame] = useState(true);
@@ -54,6 +53,7 @@ const Page = () => {
           : "Nope... Try again"}
       </h2>
       <Statistics />
+      <Options />
       <div
         className="w-[300px] h-[200px] flex items-center justify-center m-auto rounded-md"
         style={{

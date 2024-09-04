@@ -1,5 +1,5 @@
 import { useAtomValue } from "jotai";
-import { playedGamesAtom, wonGamesAtom } from "../atoms/GameAtoms";
+import { playedGamesAtom, wonGamesAtom } from "../atoms/StatisticsAtoms";
 
 const Statistics = () => {
   const gamesPlayed = useAtomValue(playedGamesAtom);
